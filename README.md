@@ -278,7 +278,7 @@ Use [`archive_today.user.js`](tools/archive_today.user.js) to extract hosts and 
 
   1. Install a userscript manager such as Tampermonkey ([install Tampermonkey](https://tampermonkey.net/))
 
-  2. Open the userscript in your browser ([open userscript](https://github.com/UoEMainLibrary/lost-and-found/tools/archive_today.user.js))
+  2. Open the userscript in your browser ([open userscript](https://github.com/UoEMainLibrary/lost-and-found/raw/refs/heads/main/tools/archive_today.user.js))
 
   3. Wait for Tampermonkey to detect the userscript, then click **Install**
 
