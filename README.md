@@ -376,7 +376,9 @@ Run [`validate.py`](tools/validate.py) to check whether discovered hosts and URL
       output/
       └── ed.ac.uk/
           └── __live/
-              └── my_registry__internet_archive__live.csv
+              ├── my_registry__internet_archive__live.csv
+              └── ...
+              
       ```
 
 <p align="right"><a href="#toolkit">Back up to the toolkit ↑</a></p>
