@@ -73,13 +73,14 @@ Tools in the *Lost and Found* toolkit are grouped by purpose:
   - **🧲 Discovery Tools**: discover hosts and URLs from external archives and datasets
   - **🔎 Analysis Tools**: process discovered hosts and URLs, compare results and validate findings
 
-| Tool                                                             | Purpose                                                                                                                                           | File                                                 |
-|------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
+| Tool                                                            | Purpose                                                                                                                                           | File                                                 |
+|-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
 | 🧲 [**Internet Archive Extractor**](#-internet-archive-extractor)| Extract hosts and URLs from Internet Archive's [Wayback CDX Server API](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server)|[`internet_archive.py`](tools/internet_archive.py)    |
 | 🧲 [**Common Crawl Extractor**](#-common-crawl-extractor)        | Extract hosts and URLs from the [Common Crawl CDX URL Index](https://index.commoncrawl.org/)                                                      |[`common_crawl.py`](tools/common_crawl.py)            |
 | 🧲 [**UKWA Extractor**](#-ukwa-extractor)                        | Extract hosts and URLs from [UKWA seed lists](https://bl.iro.bl.uk/collections/5379d014-1774-46e1-a96a-7089e7c814a3?locale=en)                    |[`ukwa.py`](tools/ukwa.py)                            |
 | 🧲 [**CRT.sh Extractor**](#-crtsh-extractor)                     | Extract hosts from [CRT.sh certificate transparency logs](https://crt.sh/)                                                                        |[`crt_sh.py`](tools/crt_sh.py)                        |
 | 🧲 [**archive.today Extractor**](#-archivetoday-extractor)       | Extract hosts and URLs from search results of [archive.today](https://archive.ph/)                                                                |[`archive_today.user.js`](tools/archive_today.user.js)|
+| 🧲 [**googleDork Extractor**](#-googledork-extractor)            | Extract hosts from [googleDorks ("dorking")](https://web.archive.org/web/20021208144443/http://johnny.ihackstuff.com/security/googleDorks.shtml)  |[`googledork.user.js`](tools/googledork.user.js)      |
 | 🔎 [**Registry Comparator**](#-registry-comparator)              | Compare two registries to identify new hosts and URLs                                                                                             |[`compare.py`](tools/compare.py)                      |
 | 🔎 [**Activity Validator**](#-activity-validator)                | Check whether discovered hosts and URLs are still active                                                                                          |[`validate.py`](tools/validate.py)                    |
 
@@ -90,22 +91,24 @@ The recommended *Lost and Found* discovery workflow is:
 ```mermaid
 flowchart TD
    A{Select Discovery Tool}
-   A --> B[🧲 ⠀Internet Archive Extractor]
-   A --> C[🧲 ⠀Common Crawl Extractor]
-   A --> D[🧲 ⠀UKWA Extractor]
-   A --> E[🧲 ⠀CRT.sh Extractor]
-   A --> F[🧲 ⠀archive.today Extractor]
-   B --> G[Extract hosts and URLs]
-   C --> G
-   D --> G
-   E --> G
-   F --> G
-   G --> H{Compare Against Registry?<br/>🔎 ⠀Registry Comparator}
+   A --> B[🧲 Internet Archive Extractor]
+   A --> C[🧲 Common Crawl Extractor]
+   A --> D[🧲 UKWA Extractor]
+   A --> E[🧲 CRT.sh Extractor]
+   A --> F[🧲 archive.today Extractor]
+   A --> G[🧲 googleDork Extractor]
+   B --> X[Extract hosts and URLs]
+   C --> X
+   D --> X
+   E --> X
+   F --> X
+   G --> X
+   X --> H{Compare Against Registry?<br/>🔎 Registry Comparator}
    H -->|Yes| I{Already Known?}
    H -->|No| K[New Discovery]
    I -->|Yes| J[Ignore]
    I -->|No| K
-   K --> L[Check Status<br/>🔎 ⠀Activity Validator]
+   K --> L[Check Status<br/>🔎 Activity Validator]
    L --> M{HTTP Response<br/>2xx / 3xx?}
    M -->|Yes| N[(Save Active Discovery)]
    M -->|No| O[Ignore]
@@ -278,7 +281,7 @@ Use [`archive_today.user.js`](tools/archive_today.user.js) to extract hosts and 
 
   1. Install a userscript manager such as Tampermonkey ([install Tampermonkey](https://tampermonkey.net/))
 
-  2. Open the userscript in your browser ([open userscript](https://github.com/UoEMainLibrary/lost-and-found/raw/refs/heads/main/tools/archive_today.user.js))
+  2. Open the userscript in your browser ([open userscript](https://github.com/UoEMainLibrary/lost-and-found/raw/refs/heads/main/tools/google_dorking.user.js))
 
   3. Wait for Tampermonkey to detect the userscript, then click **Install**
 
@@ -301,6 +304,46 @@ Use [`archive_today.user.js`](tools/archive_today.user.js) to extract hosts and 
         output/
         └── ed.ac.uk/
             └── archive_today/
+                └── urls.csv
+
+<p align="right"><a href="#toolkit">Back up to the toolkit ↑</a></p>
+
+</details>
+
+### 🧲 googleDork Extractor
+
+<details>
+
+<summary>Click to expand</summary>
+⠀
+
+Use [`googledork.user.js`](tools/googledork.user.js) to extract hosts from Google Search results using [googleDorks ("dorking")](https://web.archive.org/web/20021208144443/http://johnny.ihackstuff.com/security/googleDorks.shtml).
+
+#### Installation
+
+  1. Install a userscript manager such as Tampermonkey ([install Tampermonkey](https://tampermonkey.net/))
+
+  2. Open the userscript in your browser ([open userscript](https://github.com/UoEMainLibrary/lost-and-found/raw/refs/heads/main/tools/googledork.user.js))
+
+  3. Wait for Tampermonkey to detect the userscript, then click **Install**
+
+#### Functions
+
+  1. Perform a Google search using one or [googleDorks ("dorking")](https://web.archive.org/web/20021208144443/http://johnny.ihackstuff.com/security/googleDorks.shtml) search operators. A collection of search operators can be found in this [googleDork (dorking) cheat sheet](https://gist.github.com/sundowndev/283efaddbcf896ab405488330d1bbc06)
+
+  2. Click **Start** in the userscript interface and wait for it to process all available results pages
+
+  3. Wait until the extraction process is complete, then click **Export** to download the results or **Copy** to copy them to your clipboard
+
+  4. Click **Reset** to clear stored results before starting a new search
+
+#### Results
+
+  - Exported results will be saved to your Downloads folder. We recommend adding the results to the repository under:
+
+        output/
+        └── ed.ac.uk/
+            └── googledork/
                 └── urls.csv
 
 <p align="right"><a href="#toolkit">Back up to the toolkit ↑</a></p>
