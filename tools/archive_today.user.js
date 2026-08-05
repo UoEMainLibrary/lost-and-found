@@ -145,7 +145,8 @@
 }
 
 #uc-instructions a {
-  color: var(--primary)
+  color: var(--primary);
+  text-decoration: underline;
 }
 `;
   document.head.appendChild(style);
