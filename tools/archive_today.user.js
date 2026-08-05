@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         archive.today Extractor :: Lost and Found
-// @namespace    https://github.com/overbrowsing
+// @namespace    https://github.com/UoEMainLibrary
 // @description  Extract hosts and URLs from search results of archive.today
 // @author       The University of Edinburgh
-// @match        https://archive.ph/*
+// @match        *://archive.ph/*
 // @license      Apache 2.0
 
 // ==/UserScript==
@@ -11,8 +11,8 @@
 (() => {
   'use strict';
 
-  const STORAGE_KEY = 'url_collector_data';
-  const RUN_KEY = 'url_collector_running';
+  const STORAGE_KEY = 'archivetoday_extractor_data';
+  const RUN_KEY = 'archivetoday_extractor_running';
 
   let urls = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
   let seen = new Set(urls);
