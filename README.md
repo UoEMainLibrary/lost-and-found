@@ -329,7 +329,7 @@ Use [`googledork.user.js`](tools/googledork.user.js) to extract hosts from Googl
 
 #### Functions
 
-  1. Perform a Google search using one or [googleDorks ("dorking")](https://web.archive.org/web/20021208144443/http://johnny.ihackstuff.com/security/googleDorks.shtml) search operators. A collection of search operators can be found in this [googleDork (dorking) cheat sheet](https://gist.github.com/sundowndev/283efaddbcf896ab405488330d1bbc06)
+  1. Perform a Google search using one or [googleDorks (dorking)](https://web.archive.org/web/20021208144443/http://johnny.ihackstuff.com/security/googleDorks.shtml) search operators. A collection of search operators can be found in this [googleDork (dorking) cheat sheet](https://gist.github.com/sundowndev/283efaddbcf896ab405488330d1bbc06)
 
   2. Click **Start** in the userscript interface and wait for it to process all available results pages
 
