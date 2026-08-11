@@ -12,7 +12,7 @@ It can help answer questions such as:
    - Which forgotten services are still online?
    - Where are the gaps in web archive coverage?
 
-Originally developed for web archiving and web estate mapping at [Heritage Collections, The University of Edinburgh](https://library.ed.ac.uk/heritage-collections).
+*Lost and Found* was developed to support web archiving and web estate mapping at [Heritage Collections, The University of Edinburgh](https://library.ed.ac.uk/heritage-collections).
 
 [*Hack the planet!*](https://youtu.be/IESEcsjDcmM?si=bmouYIf1L-Z_yxzP&t=262)
 
