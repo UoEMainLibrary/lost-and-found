@@ -74,7 +74,7 @@ Tools in the *Lost and Found* toolkit are grouped by purpose:
   - **🔎 Analysis Tools**: process discovered hosts and URLs, compare results and validate findings
 
 | Tool                                                             | Purpose                                                                                                                                                                    | File                                                   |
-|------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
+|------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
 | 🧲 [**Internet Archive Extractor**](#-internet-archive-extractor) | Extract hosts and URLs from Internet Archive's [Wayback CDX Server API](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server)                         | [`internet_archive.py`](tools/internet_archive.py)     |
 | 🧲 [**Common Crawl Extractor**](#-common-crawl-extractor)         | Extract hosts and URLs from the [Common Crawl CDX URL Index](https://index.commoncrawl.org/)                                                                               | [`common_crawl.py`](tools/common_crawl.py)             |
 | 🧲 [**UKWA Extractor**](#-ukwa-extractor)                         | Extract hosts and URLs from [UKWA seed lists](https://bl.iro.bl.uk/collections/5379d014-1774-46e1-a96a-7089e7c814a3?locale=en)                                             | [`ukwa.py`](tools/ukwa.py)                             |
@@ -283,19 +283,19 @@ Use [`archive_today.user.js`](tools/archive_today.user.js) to extract hosts and 
 
   2. Open the userscript in your browser ([open userscript](https://github.com/UoEMainLibrary/lost-and-found/raw/refs/heads/main/tools/archive_today.user.js))
 
-  3. Wait for Tampermonkey to detect the userscript, then click 'Install'
+  3. Wait for Tampermonkey to detect the userscript, then click **Install**
 
 #### Functions
 
-  1. Open the archive.today 'wildcard' search page ([https://archive.ph/search/?q=*](https://archive.ph/search/?q=*))
+  1. Open the archive.today "wildcard" search page ([https://archive.ph/search/?q=*](https://archive.ph/search/?q=*))
 
-  2. Append your target domain after the existing *. in the search query and click 'Search' ([pre-filled search](https://archive.ph/search/?q=*.ed.ac.uk)).
+  2. Append your target domain after the existing *. in the search query and click **Search** ([pre-filled search](https://archive.ph/search/?q=*.ed.ac.uk)).
 
-  3. Click 'Start' in the userscript interface and wait for it to process all available results pages
+  3. Click **Start** in the userscript interface and wait for it to process all available results pages
 
-  4. Wait until the extraction process is complete, then click 'Export' to download the results or 'Copy' to copy them to your clipboard
+  4. Wait until the extraction process is complete, then click **Export** to download the results or **Copy** to copy them to your clipboard
 
-  5. Click 'Reset' to clear stored results before starting a new search
+  5. Click **Reset** to clear stored results before starting a new search
 
 #### Results
 
@@ -325,17 +325,17 @@ Use [`googledork.user.js`](tools/googledork.user.js) to extract hosts from Googl
 
   2. Open the userscript in your browser ([open userscript](https://github.com/UoEMainLibrary/lost-and-found/raw/refs/heads/main/tools/googledork.user.js))
 
-  3. Wait for Tampermonkey to detect the userscript, then click 'Install'
+  3. Wait for Tampermonkey to detect the userscript, then click **Install**
 
 #### Functions
 
   1. Perform a Google search using one or [googleDorks (dorking)](https://web.archive.org/web/20021208144443/http://johnny.ihackstuff.com/security/googleDorks.shtml) search operators. A collection of search operators can be found in this [googleDork (dorking) cheat sheet](https://gist.github.com/sundowndev/283efaddbcf896ab405488330d1bbc06)
 
-  2. Click 'Start' in the userscript interface and wait for it to process all available results pages
+  2. Click **Start** in the userscript interface and wait for it to process all available results pages
 
-  3. Wait until the extraction process is complete, then click 'Export' to download the results or 'Copy' to copy them to your clipboard
+  3. Wait until the extraction process is complete, then click **Export** to download the results or **Copy** to copy them to your clipboard
 
-  4. Click 'Reset' to clear stored results before starting a new search
+  4. Click **Reset** to clear stored results before starting a new search
 
 #### Results
 
@@ -434,7 +434,7 @@ Developed by David Mahoney at [Heritage Collections, The University of Edinburgh
 
 ## Citing
 
-If you use, implement, or reference this project, please cite it as '*Lost and Found*' and provide clear attribution to Heritage Collections, The University of Edinburgh, in publications, software, or documentation where appropriate.
+If you use, implement, or reference this project, please cite it as *Lost and Found* and provide clear attribution to Heritage Collections, The University of Edinburgh, in publications, software, or documentation where appropriate.
 
 ## Licenses
 
