@@ -5,7 +5,6 @@
 // @author       The University of Edinburgh
 // @match        *://archive.ph/*
 // @license      Apache 2.0
-
 // ==/UserScript==
 
 (() => {
