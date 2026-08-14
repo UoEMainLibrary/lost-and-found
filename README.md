@@ -434,7 +434,7 @@ Developed by David Mahoney at [Heritage Collections, The University of Edinburgh
 
 ## Citing
 
-If you use, implement, or reference this project, please cite it as '*Lost and Found*' and provide clear attribution to Heritage Collections, The University of Edinburgh, in publications, software, or documentation where appropriate.
+If you use, implement, or reference this project, please cite it as '*Lost and Found*' and include clear attribution in publications, software, or documentation where appropriate.
 
 ## Licenses
 
