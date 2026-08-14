@@ -25,7 +25,7 @@ It can help answer questions such as:
       cd lost-and-found
       ```
 
-   2. Install Python 3.10 or newer ([download Python](https://python.org/downloads))
+   2. Install Python ([download Python](https://python.org/downloads))
 
    3. Install required packages:
 
