@@ -25,7 +25,7 @@ It can help answer questions such as:
       cd lost-and-found
       ```
 
-   2. Install Python 3.10 or newer ([download Python](https://python.org/downloads/))
+   2. Install Python 3.10 or newer ([download Python](https://python.org/downloads))
 
    3. Install required packages:
 
@@ -76,10 +76,10 @@ Tools in the *Lost and Found* toolkit are grouped by purpose:
 | Tool                                                             | Purpose                                                                                                                                                                    | File                                                   |
 |------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
 | 🧲 [**Internet Archive Extractor**](#-internet-archive-extractor) | Extract hosts and URLs from Internet Archive's [Wayback CDX Server API](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server)                         | [`internet_archive.py`](tools/internet_archive.py)     |
-| 🧲 [**Common Crawl Extractor**](#-common-crawl-extractor)         | Extract hosts and URLs from the [Common Crawl CDX URL Index](https://index.commoncrawl.org/)                                                                               | [`common_crawl.py`](tools/common_crawl.py)             |
+| 🧲 [**Common Crawl Extractor**](#-common-crawl-extractor)         | Extract hosts and URLs from the [Common Crawl CDX URL Index](https://index.commoncrawl.org)                                                                                | [`common_crawl.py`](tools/common_crawl.py)             |
 | 🧲 [**UKWA Extractor**](#-ukwa-extractor)                         | Extract hosts and URLs from [UKWA seed lists](https://bl.iro.bl.uk/collections/5379d014-1774-46e1-a96a-7089e7c814a3?locale=en)                                             | [`ukwa.py`](tools/ukwa.py)                             |
-| 🧲 [**CRT.sh Extractor**](#-crtsh-extractor)                      | Extract hosts from [CRT.sh certificate transparency logs](https://crt.sh/)                                                                                                 | [`crt_sh.py`](tools/crt_sh.py)                         |
-| 🧲 [**archive.today Extractor**](#-archivetoday-extractor)        | Extract hosts and URLs from search results of [archive.today](https://archive.ph/)                                                                                         | [`archive_today.user.js`](tools/archive_today.user.js) |
+| 🧲 [**CRT.sh Extractor**](#-crtsh-extractor)                      | Extract hosts from [CRT.sh certificate transparency logs](https://crt.sh)                                                                                                  | [`crt_sh.py`](tools/crt_sh.py)                         |
+| 🧲 [**archive.today Extractor**](#-archivetoday-extractor)        | Extract hosts and URLs from search results of [archive.today](https://archive.ph)                                                                                          | [`archive_today.user.js`](tools/archive_today.user.js) |
 | 🧲 [**googleDork Extractor**](#-googledork-extractor)             | Extract hosts from Google Search results using [googleDorks (dorking)](https://web.archive.org/web/20021208144443/http://johnny.ihackstuff.com/security/googleDorks.shtml) | [`googledork.user.js`](tools/googledork.user.js)       |
 | 🔎 [**Registry Comparator**](#-registry-comparator)               | Compare two registries to identify new hosts and URLs                                                                                                                      | [`compare.py`](tools/compare.py)                       |
 | 🔎 [**Activity Validator**](#-activity-validator)                 | Check whether discovered hosts and URLs are still active                                                                                                                   | [`validate.py`](tools/validate.py)                     |
@@ -159,7 +159,7 @@ Run [`internet_archive.py`](tools/internet_archive.py) to extract hosts and URLs
 <summary>Click to expand</summary>
 ⠀
 
-Run [`common_crawl.py`](tools/common_crawl.py) to extract hosts and URLs from the [Common Crawl CDX URL Index](https://index.commoncrawl.org/).
+Run [`common_crawl.py`](tools/common_crawl.py) to extract hosts and URLs from the [Common Crawl CDX URL Index](https://index.commoncrawl.org).
 
 #### Functions
 
@@ -241,7 +241,7 @@ Run [`ukwa.py`](tools/ukwa.py) to extract hosts and URLs from [UKWA seed lists](
 <summary>Click to expand</summary>
 ⠀
 
-Run [`crt_sh.py`](tools/crt_sh.py) to extract hosts from [CRT.sh certificate transparency logs](https://crt.sh/).
+Run [`crt_sh.py`](tools/crt_sh.py) to extract hosts from [CRT.sh certificate transparency logs](https://crt.sh).
 
 #### Functions
 
@@ -273,13 +273,13 @@ Run [`crt_sh.py`](tools/crt_sh.py) to extract hosts from [CRT.sh certificate tra
 <summary>Click to expand</summary>
 ⠀
 
-Use [`archive_today.user.js`](tools/archive_today.user.js) to extract hosts and URLs from search results of [archive.today](https://archive.ph/).
+Use [`archive_today.user.js`](tools/archive_today.user.js) to extract hosts and URLs from search results of [archive.today](https://archive.ph).
 
-⚠️ [archive.today](https://archive.ph/) can be a useful research tool, but users should be aware of concerns surrounding the service. See [Wikipedia's archive.today guidance](https://en.wikipedia.org/wiki/Wikipedia:Archive.today_guidance) for more details.
+⚠️ [archive.today](https://archive.ph) can be a useful research tool, but users should be aware of concerns surrounding the service. See [Wikipedia's archive.today guidance](https://en.wikipedia.org/wiki/Wikipedia:Archive.today_guidance/) for more details.
 
 #### Installation
 
-  1. Install a userscript manager such as Tampermonkey ([install Tampermonkey](https://tampermonkey.net/))
+  1. Install a userscript manager such as Tampermonkey ([install Tampermonkey](https://tampermonkey.net))
 
   2. Open the userscript in your browser ([open userscript](https://github.com/UoEMainLibrary/lost-and-found/raw/refs/heads/main/tools/archive_today.user.js))
 
@@ -321,7 +321,7 @@ Use [`googledork.user.js`](tools/googledork.user.js) to extract hosts from Googl
 
 #### Installation
 
-  1. Install a userscript manager such as Tampermonkey ([install Tampermonkey](https://tampermonkey.net/))
+  1. Install a userscript manager such as Tampermonkey ([install Tampermonkey](https://tampermonkey.net))
 
   2. Open the userscript in your browser ([open userscript](https://github.com/UoEMainLibrary/lost-and-found/raw/refs/heads/main/tools/googledork.user.js))
 
@@ -438,4 +438,4 @@ If you use, implement, or reference this project, please cite it as '*Lost and F
 
 ## Licenses
 
-*Lost and Found* is licensed under [Apache 2.0](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)). For full licensing details, see the [LICENSE](/LICENSE) file.
+*web-archive.txt* is licensed under [Apache 2.0](https://www.tldrlegal.com/license/apache-license-2-0-apache-2-0). For full licensing details, see the [LICENSE](/LICENSE) file.
