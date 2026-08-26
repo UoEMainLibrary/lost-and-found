@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 """
 Registry Comparator :: Lost and Found
+The University of Edinburgh, Heritage Collections
 """
 
 import argparse

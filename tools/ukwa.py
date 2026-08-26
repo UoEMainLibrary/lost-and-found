@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 """
 UKWA Extractor :: Lost and Found
+The University of Edinburgh, Heritage Collections
 """
 
 import argparse
@@ -14,7 +15,7 @@ import requests
 # ------------------- User Agent -------------------
 
 HEADERS = {
-  "User-Agent": "Lost and Found :: The University of Edinburgh"
+  "User-Agent": "Lost and Found :: The University of Edinburgh, Heritage Collections"
 }
 
 # ------------------- Terminal UI -------------------

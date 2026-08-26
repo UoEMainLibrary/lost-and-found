@@ -2,7 +2,7 @@
 // @name         googleDork Extractor :: Lost and Found
 // @namespace    https://github.com/UoEMainLibrary
 // @description  Extract hosts from Google Search results using googleDorks ("dorking")
-// @author       The University of Edinburgh
+// @author       The University of Edinburgh, Heritage Collections
 // @match        *://www.google.com/search*
 // @license      Apache 2.0
 // ==/UserScript==
@@ -308,11 +308,8 @@
 
       const domain = parsed.hostname.replace(/^www\./, '');
 
-      // this is the "top-level website, not a page of it" filter — Google
-      // has no search operator for this, so it happens here instead
       if (rootOnly && pathDepth(href) > MAX_ROOT_DEPTH) return;
 
-      // skip anything already seen for this domain — same site, different page
       if (domainsSeen.has(domain)) return;
       domainsSeen.add(domain);
 

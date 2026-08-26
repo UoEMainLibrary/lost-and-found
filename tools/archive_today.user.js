@@ -2,7 +2,7 @@
 // @name         archive.today Extractor :: Lost and Found
 // @namespace    https://github.com/UoEMainLibrary
 // @description  Extract hosts and URLs from search results of archive.today
-// @author       The University of Edinburgh
+// @author       The University of Edinburgh, Heritage Collections
 // @match        *://archive.ph/*
 // @license      Apache 2.0
 // ==/UserScript==
