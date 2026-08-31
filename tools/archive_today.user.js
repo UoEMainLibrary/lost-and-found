@@ -5,6 +5,8 @@
 // @author       The University of Edinburgh, Heritage Collections
 // @match        *://archive.ph/*
 // @license      Apache 2.0
+// @downloadURL  https://raw.githubusercontent.com/UoEMainLibrary/lost-and-found/main/tools/archive_today.user.js
+// @updateURL    https://raw.githubusercontent.com/UoEMainLibrary/lost-and-found/main/tools/archive_today.user.js
 // ==/UserScript==
 
 (() => {
